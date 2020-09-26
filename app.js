@@ -2,6 +2,7 @@ const btnIngresarPaciente = document.querySelector('#btn-ingresar')
 const containerModal = document.querySelector('.container-modal')
 const cerrarModal = document.querySelector('.cancel')
 const cargarPacienteBoton = document.querySelector('#ingresar-paciente')
+const contenidoFicha = document.querySelector('#contenido-ficha') //Declaré ***contenidoFicha*** de manera global
 
 
 window.onload = function(){
@@ -55,15 +56,20 @@ function cargarPaciente(evento){
     cerrarFormulario()
 
     function desplegarPaciente(evento){
-        let contenidoFicha = document.querySelector('#contenido-ficha')
         nuevoPaciente.animal
         contenidoFicha.classList.remove('no-display')
         contenidoFicha.children[0].src='img/animales/' + nuevoPaciente.animal + '.png'
         contenidoFicha.children[1].innerHTML = nuevoPaciente.nombre
+        contenidoFicha.children[2].innerHTML = nuevoPaciente.edad //Se attachea (?) info restante
+        contenidoFicha.children[3].innerHTML = nuevoPaciente.estado
+        contenidoFicha.children[4].innerHTML = nuevoPaciente.observaciones
+
         
         }
     
-    function eliminarPaciente(){
+    function eliminarPaciente(){         //Se programa Eliminar Paciente y quitar ficha del visor derecho
+        nuevaFila.remove()
+        contenidoFicha.classList.add('no-display') // No estoy seguro de que sea la implementación más óptima, aunque me pareció la más sencilla.
 
     }
     
