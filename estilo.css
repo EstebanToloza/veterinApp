@@ -1,0 +1,157 @@
+/******************Interfaz y CSS General******************/
+/*{outline: 1px solid grey;}*/
+body{
+    margin:0;
+    font-family: 'Monda', sans-serif;
+}
+
+div{
+    box-sizing: border-box;
+}
+
+h1{
+    text-align: center;
+    margin: 20px 0;
+    color:black;
+    font-size:2.7em;
+}
+
+.contenedor{
+    width:900px;
+    margin: auto;
+    padding: 5px;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contenedor h2{
+    margin:auto;
+    margin-top: 20px;
+    margin: auto;
+    margin-top: 20px;
+    color: #607D8B;
+}
+
+#btn-ingresar{
+    width: 300px;
+    background-color: #302727;
+    text-align: center;
+    font-size: 1.3em;
+    color:white;
+    border-radius: 5px;
+    margin:auto;
+}
+
+#btn-ingresar:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    text-shadow: #FFF 0px 0px 1px, #FFF 0px 0px 5px, #FFF 0px 0px 10px, #0ff 0px 0px 5px, #0ff 0px 0px 10px, #0ff 0px 0px 20px, #0ff 0px 0px 30px, #0ff 0px 0px 40px;
+}
+#btn-ingresar:active{
+    transform: scale(1);
+}
+
+.columna{
+    width:40%;
+    margin:5%;
+    margin-top: 0px;
+}
+
+.fila-paciente, .encabezado{
+    display: grid;
+    grid-template-columns: 27.8% 27.8% 27.8% 8% 8%;
+    margin-bottom: 10px;
+    border: 1px solid #03A9F4;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    align-items: center;
+}
+.fila-paciente div{
+    overflow: hidden;
+}
+
+.fila-seleccionada{
+    background-color: #ebeaea;
+}
+
+.encabezado{
+    background-color: #282727;
+    color: white;
+    border: none;
+}
+
+.icon-ver, .icon-eliminar{
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 3px;
+    min-height: 17px;
+}
+.icon-ver:hover, .icon-eliminar:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+}
+.icon-ver:active, .icon-eliminar:active{
+    transform: scale(0.95);
+}
+.icon-ver{
+    background-image: url('img/icon-ver.png');
+}
+.icon-eliminar{
+    background-image: url('img/icon-eliminar.png');
+}
+
+#ficha-paciente{
+    border: 1px solid #03A9F4;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+#contenido-ficha div{
+    border-bottom: 1px solid #03A9F4;
+    min-height: 30px;
+    margin-top: 10px;
+}
+#contenido-ficha img{
+    display: block;
+    padding: 20px;
+    width: 80px;
+    border-radius: 80px;
+    margin: 20px auto;
+    border: 1px solid #03A9F4;
+}
+
+.flecha{
+    background: url(img/icon-arrow.png) center no-repeat;
+    background-size: contain;
+    width:20px;
+    height: 20px;
+    position: absolute;
+}
+
+.flecha:hover{
+    cursor: pointer;
+}
+.flecha:active{
+    filter: brightness(80%);
+}
+#izquierda{
+    left: 4%;
+    transform: rotate(180deg);
+}
+#derecha{
+    right: 4%;
+}
+
+.no-display{
+    display: none;
+}
+
+
+
+
+

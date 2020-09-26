@@ -1,0 +1,68 @@
+/************************** CSS Modal y Fondo***************************/
+.container-modal{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    background-color: #138ded5c;
+    opacity: 0;
+    visibility: hidden;
+}
+.modal{
+    width: 500px;
+    background-color: white;
+    margin: auto;
+    margin-top: 20vh;
+    padding: 25px;
+    border-radius: 10px;
+}
+.modal p{
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.modal input, .modal textarea, .modal select{
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    font-family: 'Ubuntu', sans-serif;
+    padding: 4px;
+}
+.modal input[type='submit']{
+    width: 220px;
+    display:block;
+    margin:auto;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 1.5em;
+    font-weight: bold;
+    border: 2px solid #03A9F4;
+    background-color: black;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    color: white;
+}
+.modal input[type='submit']:active{
+    transform: scale(0.95);
+}
+.cleaner{
+    clear:both;
+}
+.modal .cancel{
+    float: right;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.modal .cancel:hover, .modal input[type='submit']{
+    cursor: pointer;
+}
+
+/***********FX Modal*****************/
+.show{
+    transition: 1s;
+    opacity: 1;
+    visibility: visible;
+}

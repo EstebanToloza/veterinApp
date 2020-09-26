@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VeterinApp</title>
+    <link href="https://fonts.googleapis.com/css2?family=Monda&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="modal.css">
+</head>
+<body>
+    <header>
+        <h1>VeterinApp!</h1>
+    </header>
+
+    <div class="contenedor">
+        <div id='btn-ingresar'>Ingresar Paciente</div>
+    </div>
+
+    <div class="contenedor">
+        <h2>Monitor de Pacientes</h2>
+        <h2>Ficha del Paciente</h2>
+    </div>
+        
+    <div class="contenedor">
+        <div class='columna' id='panel-pacientes'>
+            <div class='encabezado'>
+                <div>Nombre</div>
+                <div>Animal</div>
+                <div>Estado</div>
+            </div>
+
+            
+            <div class='fila-paciente no-display'>
+                <div>Felipe</div>
+                <div>Gato</div>
+                <div>Crítico</div>
+                <div class='no-display'>2</div>
+                <div class='no-display'>Vomita muchos pelos</div>
+                <div class="icon-ver"></div>
+                <div class="icon-eliminar"></div>
+            </div>
+
+<!--             <div class='fila-paciente'>
+                <div>Alfonsina</div>
+                <div>Caballo</div>
+                <div>Mejorando</div>
+                <div class='no-display'>10</div>
+                <div class='no-display'>Se come las plantas de la dueña</div>
+                <div class="icon-ver"></div>
+                <div class="icon-eliminar"></div>
+            </div>
+
+            <div class='fila-paciente'>
+                <div>Timotea</div>
+                <div>Suricata</div>
+                <div>Empeorando</div>
+                <div class='no-display'>4</div>
+                <div class='no-display'>Tiene una tortícolis galopante por estar parada y estresada todo el día</div>
+                <div class="icon-ver"></div>
+                <div class="icon-eliminar"></div>
+            </div>
+
+            <div class='fila-paciente'>
+                <div>Pepe</div>
+                <div>Zorrino</div>
+                <div>Crítico</div>
+                <div class='no-display'>55</div>
+                <div class='no-display'>Apesta! Está obsesionado con la palabra "L´amour"</div>
+                <div class="icon-ver"></div>
+                <div class="icon-eliminar"></div>
+            </div> -->
+            
+
+        </div>
+
+        <div class='columna' id='ficha-paciente'>
+            
+            <!-- Bonus Track: sliders -->
+            <!--
+            <div id='nav-pacientes' class="no-display">
+                <div class='flecha' id='izquierda'></div>
+                <div class='flecha' id='derecha'></div>
+            </div>
+            -->
+            
+            <div id='contenido-sin-ficha'>
+                SELECCIONE UN PACIENTE
+            </div>
+                        
+            <div id='contenido-ficha' class="no-display">
+
+                <img src='img/animales/gato.png'>
+                <div>Nombre</div>
+                <div>Edad</div>
+                <div>Estado</div>
+                <div>Observaciones</div>
+
+            </div>
+            
+        </div>
+
+    </div>
+
+    <!-------------------Modal---------------------------->
+
+    <div class="container-modal">
+        <div class='modal'>
+            <span class="cancel">x</span>
+            <p class='titulo'>Ingresar Paciente</p>
+            <form>
+                <select class='animal'>
+                    <option value='Perro'>Perro</option>
+                    <option value='Gato'>Gato</option>
+                    <option value='Pato'>Pato</option>
+                    <option value='Suricata'>Suricata</option>
+                    <option value='Zorrino'>Zorrino</option>
+                    <option value='Serpiente'>Serpiente</option>
+                    <option value='Caballo'>Caballo</option>
+                </select>
+                <input type='text' placeholder='Nombre' class='nombre'></input>
+                <input type='text' placeholder='Edad' class='edad'></input>
+                <select class='estado'>
+                    <option value='Estable'>Estable</option>
+                    <option value='Mejorando'>Mejorando</option>
+                    <option value='Empeorando'>Empeorando</option>
+                    <option value='Crítico'>Crítico</option>
+                </select>
+                <textarea placeholder='Observaciones' class='observaciones'></textarea>
+                <input type='submit' id='ingresar-paciente' value='Ingresar'>
+            </form>
+            <div class="cleaner"></div>
+        </div>
+    </div>
+
+    <!-------------------Auxiliares---------------------------->
+    
+    <div class='auxiliares no-display'>
+
+        <div class='fila-paciente'>
+            <div>Felipe</div>
+            <div>Gato</div>
+            <div>Crítico</div>
+            <div class='no-display'>Edad</div>
+            <div class='no-display'>Observaciones</div>
+            <div class="icon-ver"></div>
+            <div class="icon-eliminar"></div>
+        </div>
+
+    </div> 
+    
+    <script src="app.js"></script>
+
+</body>
+</html>
