@@ -18,6 +18,8 @@ window.onload = function(){
 function llenarFormulario(){
 
     containerModal.classList.add('show')
+    let limpiarFormulario = document.querySelector('form')
+    limpiarFormulario.reset()  //Se crea variable limpiarFormulario y se le agrega el método .reset 
 }
 
 function cerrarFormulario(){
@@ -57,7 +59,7 @@ function cargarPaciente(evento){
 
     function desplegarPaciente(evento){
         nuevoPaciente.animal
-        contenidoFicha.classList.remove('no-display')
+        contenidoFicha.classList.remove('no-display')   
         contenidoFicha.children[0].src='img/animales/' + nuevoPaciente.animal + '.png'
         contenidoFicha.children[1].innerHTML = nuevoPaciente.nombre
         contenidoFicha.children[2].innerHTML = nuevoPaciente.edad //Se attachea (?) info restante
@@ -69,8 +71,14 @@ function cargarPaciente(evento){
     
     function eliminarPaciente(){         //Se programa Eliminar Paciente y quitar ficha del visor derecho
         nuevaFila.remove()
-        contenidoFicha.classList.add('no-display') // No estoy seguro de que sea la implementación más óptima, aunque me pareció la más sencilla.
 
+        if (
+            contenidoFicha.children[1].innerText ===
+            nuevaFila.children[0].innerText
+        ) {
+
+            contenidoFicha.classList.add('no-display') // No estoy seguro de que sea la implementación más óptima, aunque me pareció la más sencilla.
+        }
     }
     
 }
