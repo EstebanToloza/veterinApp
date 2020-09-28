@@ -3,6 +3,7 @@ const containerModal = document.querySelector('.container-modal')
 const cerrarModal = document.querySelector('.cancel')
 const cargarPacienteBoton = document.querySelector('#ingresar-paciente')
 const contenidoFicha = document.querySelector('#contenido-ficha') //Declaré ***contenidoFicha*** de manera global
+const modificarTitulo = document.querySelector('#contenido-sin-ficha')  //Se crea const que se usará para modificar o limpiar título de ficha de paciente
 
 
 window.onload = function(){
@@ -10,8 +11,6 @@ window.onload = function(){
     btnIngresarPaciente.onclick = llenarFormulario
     cerrarModal.onclick = cerrarFormulario
     cargarPacienteBoton.onclick = cargarPaciente
-    
-
 
 }
 
@@ -57,16 +56,17 @@ function cargarPaciente(evento){
 
     cerrarFormulario()
 
-    function desplegarPaciente(evento){
-        nuevoPaciente.animal
-        contenidoFicha.classList.remove('no-display')   
+    function desplegarPaciente(){
+
+        modificarTitulo.innerText = nuevoPaciente.animal
+
         contenidoFicha.children[0].src='img/animales/' + nuevoPaciente.animal + '.png'
         contenidoFicha.children[1].innerHTML = nuevoPaciente.nombre
         contenidoFicha.children[2].innerHTML = nuevoPaciente.edad //Se attachea (?) info restante
         contenidoFicha.children[3].innerHTML = nuevoPaciente.estado
         contenidoFicha.children[4].innerHTML = nuevoPaciente.observaciones
+        contenidoFicha.classList.remove('no-display') 
 
-        
         }
     
     function eliminarPaciente(){         //Se programa Eliminar Paciente y quitar ficha del visor derecho
@@ -78,6 +78,7 @@ function cargarPaciente(evento){
         ) {
 
             contenidoFicha.classList.add('no-display') // No estoy seguro de que sea la implementación más óptima, aunque me pareció la más sencilla.
+            modificarTitulo.innerText = "SELECCIONE UN PACIENTE"
         }
     }
     
